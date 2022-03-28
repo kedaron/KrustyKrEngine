@@ -18,6 +18,9 @@ project "KrustyKrEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "kkpch.h"
+	pchsource "KrustyKrEngine/src/kkpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace KrustyKrEngine {
 
 	class KRUSTYKRENGINE_API MouseMovedEvent : public Event {

@@ -1,9 +1,6 @@
 #pragma once
-
+#include "kkpch.h"
 #include "KrustyKrEngine/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace KrustyKrEngine {
 	enum class EventType {

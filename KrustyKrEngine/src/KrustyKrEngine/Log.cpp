@@ -1,3 +1,4 @@
+#include "kkpch.h"
 #include "Log.h"
 
 namespace KrustyKrEngine {
