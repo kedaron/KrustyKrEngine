@@ -1,0 +1,3 @@
+[submodule "KrustyKrEngine/vendor/spdlog"]
+	path = KrustyKrEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

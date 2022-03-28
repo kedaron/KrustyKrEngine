@@ -27,9 +27,15 @@
     <ClInclude Include="src\KrustyKrEngine\EntryPoint.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="src\KrustyKrEngine\Log.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\KrustyKrEngine\Application.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\KrustyKrEngine\Log.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
