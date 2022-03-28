@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace KrustyKrEngine {
 	class KRUSTYKRENGINE_API Application

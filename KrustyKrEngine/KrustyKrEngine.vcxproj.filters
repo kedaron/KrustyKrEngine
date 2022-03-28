@@ -4,6 +4,9 @@
     <Filter Include="KrustyKrEngine">
       <UniqueIdentifier>{4A8CB013-365A-A419-1FEE-14400B5B807E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="KrustyKrEngine\Events">
+      <UniqueIdentifier>{EE409824-5AAD-531F-23A1-EB7C8FCC7587}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\KrustyKrEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\KrustyKrEngine\EntryPoint.h">
       <Filter>KrustyKrEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KrustyKrEngine\Events\ApplicationEvent.h">
+      <Filter>KrustyKrEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KrustyKrEngine\Events\Event.h">
+      <Filter>KrustyKrEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KrustyKrEngine\Events\KeyEvent.h">
+      <Filter>KrustyKrEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\KrustyKrEngine\Events\MouseEvent.h">
+      <Filter>KrustyKrEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\KrustyKrEngine\Log.h">
       <Filter>KrustyKrEngine</Filter>

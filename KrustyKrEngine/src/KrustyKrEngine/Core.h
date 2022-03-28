@@ -9,3 +9,5 @@
 #else
 	#error KrustyKrEngine only supports Windows!
 #endif // KK_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
