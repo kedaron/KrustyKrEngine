@@ -10,6 +10,12 @@ workspace "KrustyKrEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- include directories relative to root folder
+IncludeDir = {}
+IncludeDir["GLFW"] = "KrustyKrEngine/vendor/GLFW/include"
+
+include "KrustyKrEngine/vendor/GLFW"
+
 project "KrustyKrEngine"
 	location "KrustyKrEngine"
 	kind "SharedLib"
@@ -30,7 +36,14 @@ project "KrustyKrEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -51,14 +64,17 @@ project "KrustyKrEngine"
 
 	filter "configurations:Debug"
 		defines "KK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "KK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "KK_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -98,12 +114,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "KK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "KK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "KK_DIST"
+		buildoptions "/MD"
 		optimize "On"

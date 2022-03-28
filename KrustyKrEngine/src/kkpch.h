@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "KrustyKrEngine/Log.h"
+
 #ifdef KK_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

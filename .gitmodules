@@ -1,3 +1,6 @@
 [submodule "KrustyKrEngine/vendor/spdlog"]
 	path = KrustyKrEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "KrustyKrEngine/vendor/GLFW"]
+	path = KrustyKrEngine/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
