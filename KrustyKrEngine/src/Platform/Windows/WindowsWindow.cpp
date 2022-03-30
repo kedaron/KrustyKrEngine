@@ -25,12 +25,14 @@ namespace KrustyKrEngine {
 	}
 
 	void WindowsWindow::Init(const WindowProps& props) {
+		// set window properties
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
 		KK_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
+		// initialize GLFW
 		if (!s_GLFWInitialized) {
 			int success = glfwInit();
 			KK_CORE_ASSERT(success, "Could nt initialize GLFW!");
@@ -38,6 +40,7 @@ namespace KrustyKrEngine {
 			s_GLFWInitialized = true;
 		}
 
+		// create window
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
@@ -62,6 +65,7 @@ namespace KrustyKrEngine {
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int modes) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			
+			// differentiate between key actions
 			switch (action) {
 				case GLFW_PRESS:
 				{
@@ -87,6 +91,7 @@ namespace KrustyKrEngine {
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int modes) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
+			// differentiate between mouse actions
 			switch (action)
 			{
 				case GLFW_PRESS:

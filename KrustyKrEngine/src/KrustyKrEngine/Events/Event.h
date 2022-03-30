@@ -26,6 +26,7 @@ namespace KrustyKrEngine {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
+	// base event interface
 	class KRUSTYKRENGINE_API Event {
 		friend class EventDispatcher;
 	public:
